@@ -157,37 +157,53 @@ header .logo {
 }
 
 .aboutProduct {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-transform: uppercase;
   color: #4b2d8b;
   font-size: 50px;
   text-align: center;
-  padding: 33px;
+  height: 100px;
 }
 
 .aboutImg {
-  padding-right: 55px;
-  width: 341px;
-  height: 341px;
+  width: 100%;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .aboutImg {
-    padding: 30px;
+    padding-bottom: 30px;
   }
+}
+
+.aboutImg img {
+  min-width: 70%;
+  height: auto;
 }
 
 .block1 {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
   flex-wrap: nowrap;
+}
+
+@media screen and (max-width: 768px) {
+  .block1 {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media screen and (max-width: 480px) {
   .block1 {
     flex-wrap: wrap;
-    display: flex;
     justify-content: center;
     align-items: center;
   }
@@ -196,7 +212,6 @@ header .logo {
 @media screen and (max-width: 544px) {
   .block1 {
     flex-wrap: wrap;
-    display: flex;
     justify-content: center;
     align-items: center;
   }
@@ -205,6 +220,8 @@ header .logo {
 .block1 .textAbout {
   font-size: 23px;
   color: #4b2d8b;
+  justify-content: center;
+  margin-left: 30px;
 }
 
 @media screen and (max-width: 992px) {
@@ -213,11 +230,23 @@ header .logo {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .block1 .textAbout {
+    font-size: 23px;
+  }
+}
+
 .btn {
   display: flex;
   justify-content: flex-end;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .btn {
+    justify-content: center;
+  }
 }
 
 .catalog {
@@ -243,6 +272,14 @@ header .logo {
   border: 1px solid red;
 }
 
+@media screen and (max-width: 768px) {
+  .catalog {
+    width: 400px;
+    height: 60px;
+    font-size: 23px;
+  }
+}
+
 .block-images {
   display: flex;
   justify-content: space-between;
@@ -260,17 +297,18 @@ header .logo {
 }
 
 .block-images div {
+  max-width: 367px;
   display: block;
   padding: 10px;
 }
 
-.block-images div:nth-child(3) {
-  padding: 0;
+.block-images div:last-child {
+  padding-right: 0px;
 }
 
 @media screen and (max-width: 992px) {
-  .block-images div:nth-child(2) {
-    padding: 0;
+  .block-images div {
+    padding: 5px;
   }
 }
 
