@@ -1,6 +1,6 @@
 * {
   margin: 0;
-  padding: 0;
+  padding: 10;
 }
 
 body {
@@ -39,12 +39,33 @@ a {
   }
 }
 
+@media screen and (max-width: 992px) {
+  .topline {
+    height: 100px;
+  }
+}
+
+@media screen and (max-width: 497px) {
+  .topline {
+    height: 150px;
+  }
+}
+
 .inner {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  flex-wrap: nowrap;
+}
+
+@media screen and (max-width: 992px) {
+  .inner {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 }
 
 .inner button {
@@ -64,16 +85,16 @@ a {
   text-overflow: ellipsis;
 }
 
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 992px) {
   .inner button {
-    font-size: 12px;
+    font-size: 14px;
     height: 40px;
     margin-left: 10px;
     margin-right: 10px;
   }
 }
 
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1200px) {
   .inner button {
     font-size: 16px;
   }
@@ -91,6 +112,13 @@ a {
   margin-right: 56px;
 }
 
+@media screen and (max-width: 992px) {
+  .inner .mail {
+    margin: 0;
+    padding: 5px;
+  }
+}
+
 .socials {
   display: flex;
   align-items: center;
@@ -99,6 +127,13 @@ a {
 .socials img {
   width: 24px;
   padding-left: 8px;
+}
+
+@media screen and (max-width: 497px) {
+  .socials img {
+    width: 48px;
+    padding: 16px;
+  }
 }
 
 nav {
@@ -110,6 +145,12 @@ nav {
   nav {
     padding-left: 10px;
     padding-right: 10px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  nav {
+    display: none;
   }
 }
 
@@ -150,9 +191,8 @@ header {
 }
 
 header .logo {
-  padding: 10px;
   display: block;
-  max-width: 100%;
+  max-width: 95%;
   height: auto;
 }
 
