@@ -37,6 +37,9 @@ a
         height: 150px
     @media screen and (max-width: 320px)
         height: 30vh
+    @media screen and (max-width: 992px)
+        display: flex
+        align-items: center
         
     
 .inner
@@ -90,6 +93,7 @@ a
     align-items: center
     @media screen and (max-width: 497px)
         width: 100%
+        &:nth-child(4)
     div
         width: 100%
         justify-content: space-around
@@ -100,9 +104,10 @@ a
         left: 8px
     @media screen and (max-width: 497px)
         padding: 0
-        width: 48px
-    @media screen and (max-width: 320px)
         width: 36px
+    @media screen and (max-width: 320px)
+        width: 24px
+        padding: 5px
 nav
     padding:
         left: 122px
