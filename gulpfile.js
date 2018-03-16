@@ -47,21 +47,21 @@ gulp.task('sass', function(){ // Создаем таск Sass
 gulp.task('browser-sync', function() { // Создаем таск browser-sync
     browserSync({ // Выполняем browserSync
         server: { // Определяем параметры сервера
-            baseDir: 'app' // Директория для сервера - app
+            baseDir: './' // Директория для сервера - app
         },
         notify: false // Отключаем уведомления
     });
 });
 
-gulp.task('watcher',function(){
+gulp.task('watch',function(){
   gulp.watch(paths.css, ['mincss']);
   gulp.watch(paths.script, ['scripts']);
   gulp.watch(paths.html, ['html']);
 });
 
-gulp.task('watch', ['browser-sync', 'sass'], function() {
+gulp.task('watch', ['browser-sync', 'sass', 'html'], function() {
     gulp.watch('app/sass/*.sass', ['sass']); // Наблюдение за sass файлами
-    gulp.watch('app/*html', ['html']);// Наблюдение за другими типами файлов
+    gulp.watch('index.html', ['html']);// Наблюдение за другими типами файлов
 });
 
 gulp.task('default', ['watch', 'browserSync']);

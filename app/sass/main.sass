@@ -1,11 +1,13 @@
 $color: #4b2d8b
-
+@font-face
+    font-family: Neucha
+    src: url(../fonts/neucha.ttf)
 
 *
     margin: 0
     padding: 0
 body
-    font-family: "Neucha"
+    font-family: "Neucha", 'Arial', sans-serif
 
 a
     text-decoration: none
@@ -114,6 +116,8 @@ a
     text-align: center
     cursor: pointer
     font-size: 30px
+    height: 50px
+    line-height: 50px
     background-color: #8567b2
     @media screen and (min-width: 497px)
         display: none
@@ -144,6 +148,7 @@ a
             display: block
             text-align: center   
         li
+            display: block
             font-size: 22px
             text-transform: uppercase
             color: #4b2d8b
@@ -151,6 +156,7 @@ a
                 text-decoration: underline
                 @media screen and (max-width: 497px)
                     text-decoration: none
+                    background-color: #003333
             @media screen and (max-width: 992px)
                 font-size: 14px
             @media screen and (max-width: 497px)
@@ -164,7 +170,6 @@ a
                 @media screen and (max-width: 497px)
                     color: #fff
                 &:hover
-                    color: black
             
 
 //header
