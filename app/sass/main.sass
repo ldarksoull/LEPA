@@ -1,7 +1,7 @@
 $color: #4b2d8b
-@font-face
-    font-family: Neucha
-    src: url(../fonts/neucha.ttf)
+// @font-face
+//     font-family: Neucha
+//     src: url(../fonts/neucha.ttf)
 
 *
     margin: 0
@@ -36,9 +36,9 @@ a
     @media screen and (max-width: 992px)
         height: 100px
     @media screen and(max-width: 497px )
-        height: 150px
+        height: 25vh
     @media screen and (max-width: 320px)
-        height: 30vh
+        height: 25vh
     @media screen and (max-width: 992px)
         display: flex
         align-items: center
@@ -50,13 +50,19 @@ a
     justify-content: space-between
     align-items: center
     width: 100%
-    flex-wrap: nowrap
+    flex-wrap: wrap
     @media screen and (max-width: 992px)
         justify-content: center
         align-items: center
         flex-wrap: wrap
+    @media screen and (max-width: 497px)
+        flex-direction: column
 
     button
+        @media screen and (max-width: 497px)
+            margin:
+                top: 5px
+                bottom: 5px
         @media screen and (max-width: 992px)
             font-size: 14px
             height: 40px
@@ -70,7 +76,7 @@ a
             right: 55px
         font:
             family: "Neucha"
-            size: 18px
+            size: 14px
         text-transform: uppercase
         width: 236px
         height: 30px
@@ -90,38 +96,38 @@ a
         @media screen and (max-width: 992px)
             margin: 0
             padding: 5px
+        @media screen and (max-width: 497px)
+            padding-bottom: 5px
+// Социальные иконки            
 .socials
     display: flex
     align-items: center
-    @media screen and (max-width: 497px)
-        width: 100%
-        &:nth-child(4)
+    justify-content: center
     div
         width: 100%
         justify-content: space-around
+
 .socials img
-    display: flex
-    width: 24px
-    padding:
-        left: 8px
+    width: 24px 
+    margin-left: 5px 
     @media screen and (max-width: 497px)
         padding: 0
-        width: 36px
-    @media screen and (max-width: 320px)
-        width: 24px
-        padding: 5px
+        width: 40px
+
 
 // Стиль для кнопки меню
 .btn-menu
-    text-align: center
+    display: flex
+    justify-content: center
+    align-items: center
     cursor: pointer
     font-size: 30px
-    height: 50px
-    line-height: 50px
+    height: 7vh
     background-color: #8567b2
+    outline: 2px solid black
     @media screen and (min-width: 497px)
-        display: none
-
+        display: none 
+    
 #nav
     padding:
         left: 122px
@@ -136,7 +142,7 @@ a
         display: flex
         flex-direction: column
         width: 100%
-        height: 390px
+        height: calc(100vh - 25vh - 7vh)
         align-content: center
         z-index: 1
     ul   
@@ -160,9 +166,10 @@ a
             @media screen and (max-width: 992px)
                 font-size: 14px
             @media screen and (max-width: 497px)
-                padding: 11.5px
+                height: calc(68vh / 7)
+                line-height: calc(68vh / 7)
                 font-size: 26px
-                border: 1px solid black
+                outline: 1px solid black
                 background-color: $color
                 opacity: 0.9
                 
@@ -177,7 +184,6 @@ header
     display: flex
     justify-content: center
     align-items: center
-    width: 100%
     height: 397px
     background:
         image: url(../img/header.jpg)
@@ -186,10 +192,12 @@ header
         size: cover
     @media screen and (max-width: 497px)
         z-index: -1
+        height: calc(100vh - 25vh - 7vh)
     .logo 
         display: block
-        max-width: 95%
+        max-width: 90%
         height: auto
+        margin: 0 auto
 
 .aboutProduct
     display: flex
@@ -199,7 +207,7 @@ header
     color: $color
     font-size: 50px
     text-align: center
-    height: 100px
+    height: 120px
 
 .aboutImg
     width: 100%
