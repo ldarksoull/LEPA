@@ -8,7 +8,7 @@ var plumber     = require('gulp-plumber');
 var reload      = browserSync.reload;
 
 var paths = {
-  html:['app/index.html'],
+  html:['index.html'],
   css:['app/css/main.css'],
   script:['app/js/script.js'],
   sass:['app/sass/main.sass']
@@ -35,8 +35,8 @@ gulp.task('html', function(){
 // ////////////////////////////
 gulp.task('sass', function(){ // Создаем таск Sass
     return gulp.src(paths.sass) // Берем источник
-        .pipe(sass()) // Преобразуем Sass в CSS посредством gulp-sass
         .pipe(plumber())
+        .pipe(sass()) // Преобразуем Sass в CSS посредством gulp-sass
         .pipe(gulp.dest('app/css')) // Выгружаем результата в папку app/css
         .pipe(browserSync.reload({stream: true})) // Обновляем CSS на странице при изменении
 });

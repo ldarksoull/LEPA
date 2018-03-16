@@ -114,7 +114,7 @@ a
     text-align: center
     cursor: pointer
     font-size: 30px
-    border: 2px solid grey
+    background-color: #8567b2
     @media screen and (min-width: 497px)
         display: none
 
@@ -122,39 +122,50 @@ a
     padding:
         left: 122px
         right: 122px
-    @media screen and (max-width: 497px)
-        display: none
     @media screen and (max-width: 1150px)
         padding:
             left: 10px
             right: 10px
     @media screen and (max-width: 497px)
+        padding: 0
+        position: absolute
         display: flex
         flex-direction: column
-        height: 330px
+        width: 100%
+        height: 390px
         align-content: center
-    ul    
-        height: 60px
+        z-index: 1
+    ul   
         list-style: none
         display: flex 
         justify-content: space-between
-        align-items: center
+        align-items: center       
         @media screen and (max-width: 497px)
-            display: flex
-            flex-direction: column
+            display: block
+            text-align: center   
         li
             font-size: 22px
             text-transform: uppercase
             color: #4b2d8b
             &:hover
                 text-decoration: underline
-            @media screen and (max-width: 497px)
-                padding: 10px
-                font-size: 24px
-                border: 2px solid black
-                background-color: grey
+                @media screen and (max-width: 497px)
+                    text-decoration: none
             @media screen and (max-width: 992px)
-                font-size: 16px
+                font-size: 14px
+            @media screen and (max-width: 497px)
+                padding: 11.5px
+                font-size: 26px
+                border: 1px solid black
+                background-color: $color
+                opacity: 0.9
+                
+            a
+                @media screen and (max-width: 497px)
+                    color: #fff
+                &:hover
+                    color: black
+            
 
 //header
 header
@@ -168,6 +179,8 @@ header
         repeat: no-repeat
         position: contain
         size: cover
+    @media screen and (max-width: 497px)
+        z-index: -1
     .logo 
         display: block
         max-width: 95%
