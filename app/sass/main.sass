@@ -12,36 +12,39 @@ body
 a
     text-decoration: none
 .wrapper
+    max-width: 1440px
+    display: block
+    margin: 0 auto
     padding:
-        left: 122px
-        right: 122px
+            left: 10px
+            right: 10px
     @media screen and (max-width: 1150px)
         padding:
-            left: 10px
-            right: 10px  
+            left: 20px
+            right: 20px 
 //topline
 
 .topline
     display: flex
     background-color: #c4dcf1
-    height: 40px
+    border-bottom: 1px solid #8e8e8e
+    height: 60px
     padding:
-        left: 122px
-        right: 122px
-    @media screen and (max-width: 1144px) 
-        padding:
             left: 10px
             right: 10px
-        height: 60px
+    @media screen and (max-width: 1150px)
+        padding:
+            left: 20px
+            right: 20px
     @media screen and (max-width: 992px)
         height: 100px
-    @media screen and(max-width: 497px )
+        display: flex
+        align-items: center
+    @media screen and (max-width: 497px)
         height: 25vh
     @media screen and (max-width: 320px)
         height: 25vh
-    @media screen and (max-width: 992px)
-        display: flex
-        align-items: center
+        
         
     
 .inner
@@ -50,30 +53,25 @@ a
     justify-content: space-between
     align-items: center
     width: 100%
-    flex-wrap: wrap
+    max-width: 1440px
+    flex-wrap: nowrap
     @media screen and (max-width: 992px)
         justify-content: center
         align-items: center
-        flex-wrap: wrap
     @media screen and (max-width: 497px)
         flex-direction: column
 
     button
-        @media screen and (max-width: 497px)
-            margin:
-                top: 5px
-                bottom: 5px
+        @media screen and (max-width: 1200px)
+            font-size: 16px
         @media screen and (max-width: 992px)
             font-size: 14px
             height: 40px
             margin:
                 left: 10px
                 right: 10px
-        @media screen and (max-width: 1200px)
-            font-size: 16px
-        margin:
-            left: 54px
-            right: 55px
+        @media screen and (max-width: 769px)
+            font-size: 12px
         font:
             family: "Neucha"
             size: 14px
@@ -92,7 +90,6 @@ a
         &:active
             border: 1px solid red
     .mail
-        margin-right: 56px
         @media screen and (max-width: 992px)
             margin: 0
             padding: 5px
@@ -125,17 +122,31 @@ a
     height: 7vh
     background-color: #8567b2
     outline: 2px solid black
-    @media screen and (min-width: 497px)
+    @media screen and (min-width: 770px)
         display: none 
     
 #nav
+    border-bottom: 1px solid #8e8e8e
+    margin: 0 auto
+    height: 60px
+    line-height: 60px
     padding:
-        left: 122px
-        right: 122px
-    @media screen and (max-width: 1150px)
-        padding:
             left: 10px
             right: 10px
+    @media screen and (max-width: 1150px)
+        padding:
+            left: 20px
+            right: 20px 
+    @media screen and (max-width: 769px)
+        padding: 0
+        position: absolute
+        display: flex
+        flex-direction: column
+        width: 100%
+        height: 397px
+        align-content: center
+        z-index: 1
+        display: none
     @media screen and (max-width: 497px)
         padding: 0
         position: absolute
@@ -145,16 +156,23 @@ a
         height: calc(100vh - 25vh - 7vh)
         align-content: center
         z-index: 1
-    ul   
-        list-style: none
-        display: flex 
+        display: none
+    ul  
+        display: flex
         justify-content: space-between
-        align-items: center       
-        @media screen and (max-width: 497px)
+        align-items: center
+        margin: 0 auto
+        max-width: 1440px
+        list-style: none 
+        flex-wrap: wrap  
+        height: 60px    
+        @media screen and (max-width: 769px)
             display: block
-            text-align: center   
+            text-align: center
         li
-            display: block
+            display: flex
+            justify-content: center
+            align-items: center
             font-size: 22px
             text-transform: uppercase
             color: #4b2d8b
@@ -163,8 +181,20 @@ a
                 @media screen and (max-width: 497px)
                     text-decoration: none
                     background-color: #003333
+            @media screen and (max-width: 1240px)
+                font-size: 18px
             @media screen and (max-width: 992px)
-                font-size: 14px
+                height: 50px
+                font-size: 15px
+                font-weight: bold
+            @media screen and (max-width: 769px)
+                padding: 0
+                height: calc(397px / 7)
+                line-height: calc(397px / 7)
+                font-size: 22px
+                outline: 1px solid black
+                background-color: $color
+                opacity: 0.9
             @media screen and (max-width: 497px)
                 height: calc(68vh / 7)
                 line-height: calc(68vh / 7)
@@ -172,9 +202,10 @@ a
                 outline: 1px solid black
                 background-color: $color
                 opacity: 0.9
-                
+            @media screen and (min-width: 770px) and (max-width: 886px)
+                font-size: 12px               
             a
-                @media screen and (max-width: 497px)
+                @media screen and (max-width: 769px)
                     color: #fff
                     display: block
             
@@ -185,13 +216,15 @@ header
     justify-content: center
     align-items: center
     height: 397px
+    border-bottom: 3px solid #6640b6
     background:
         image: url(../img/header.jpg)
         repeat: no-repeat
         position: contain
         size: cover
-    @media screen and (max-width: 497px)
+    @media screen and (max-width: 768px)
         z-index: -1
+    @media screen and (max-width: 497px)
         height: calc(100vh - 25vh - 7vh)
     .logo 
         display: block
@@ -215,12 +248,13 @@ header
     display: flex
     justify-content: center
     align-items: center
-    @media screen and(max-width: 768px )
+    @media screen and (max-width: 497px)
+        padding: 5px
+    @media screen and (max-width: 768px)
         padding-bottom: 30px 
     img
         min-width: 70%
         height: auto
-
 .block1
     display: flex
     justify-content: space-around
@@ -230,24 +264,19 @@ header
         flex-wrap: wrap
         justify-content: center
         align-items: center
-    @media screen and(max-width: 480px )
-        flex-wrap: wrap
-        justify-content: center
-        align-items: center
-    @media screen and(max-width: 544px )
-        flex-wrap: wrap
-        justify-content: center
-        align-items: center
 
     .textAbout
         font-size: 23px
         color: $color
-        justify-content: center
         margin-left: 30px
         @media screen and (max-width: 992px)
             font-size: 20px
+            margin-left: 0
         @media screen and (max-width: 768px)
             font-size: 23px
+            text-align: center
+        @media screen and (max-width: 497px)
+            font-size: 20px
 .btn
     display: flex
     justify-content: flex-end
