@@ -177,7 +177,8 @@ a {
           opacity: 0.9; } }
       @media screen and (max-width: 497px) {
         #nav ul li a {
-          color: #fff; } }
+          color: #fff;
+          display: block; } }
 
 header {
   display: flex;

@@ -30,6 +30,11 @@ gulp.task('html', function(){
   .pipe(reload({stream:true}));
 });
 
+gulp.task('script', function(){
+    gulp.src(paths.script)
+    .pipe(reload({stream:true}));
+  });
+
 // ////////////////////////////
 // Sass
 // ////////////////////////////
@@ -55,13 +60,13 @@ gulp.task('browser-sync', function() { // Создаем таск browser-sync
 
 gulp.task('watch',function(){
   gulp.watch(paths.css, ['mincss']);
-  gulp.watch(paths.script, ['scripts']);
   gulp.watch(paths.html, ['html']);
 });
 
-gulp.task('watch', ['browser-sync', 'sass', 'html'], function() {
+gulp.task('watch', ['browser-sync', 'sass', 'html', 'script'], function() {
     gulp.watch('app/sass/*.sass', ['sass']); // Наблюдение за sass файлами
     gulp.watch('index.html', ['html']);// Наблюдение за другими типами файлов
+    gulp.watch('app/js/*.js', ['script']);
 });
 
 gulp.task('default', ['watch', 'browserSync']);
