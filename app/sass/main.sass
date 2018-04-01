@@ -307,45 +307,41 @@ header
         width: 400px
         height: 60px
         font-size: 23px
-.block-images
+
+.galery
+    display: flex
+    flex-direction: column
+
+.galery-images
     display: flex
     justify-content: space-between
     align-items: center
     flex-wrap: nowrap
     max-width: 100%
-    height: 400px
     @media screen and (max-width: 992px)
         justify-content: center
-        flex-wrap: wrap
+        flex-wrap: nowrap
     div
-        max-width: 367px
-        display: block
-        padding: 10px
-    div:last-child
-        padding-right: 0px
-    @media screen and (max-width: 992px)
-        div
-            padding: 5px
+        margin: 5px
     img
         max-width: 100%
         height: auto
 
-.pictures   
+.galery-images2
     display: flex
     justify-content: space-between
     align-items: center
-    div
-        display: flex
-        img
-            width: 100%
-            height: auto  
-.advantages
-    border: 2px solid grey
-    height: 531px
-    display: flex
-    justify-content: space-around
-    align-items: center
-    .block-adv
+    flex-wrap: nowrap
+    max-width: 100%
+    margin: 5px
+    @media screen and (max-width: 992px)
+        justify-content: center
+        flex-wrap: nowrap
+    img
+        max-width: 100%
+        height: auto
+
+
 
 
 
