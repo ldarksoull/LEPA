@@ -419,7 +419,8 @@ header {
   @media screen and (max-width: 780px) {
     .advantages-image {
       flex-wrap: wrap;
-      width: 100px; } }
+      width: 100px;
+      padding: 10px; } }
   .advantages-image img {
     padding-top: 20px;
     width: 50%;
