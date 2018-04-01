@@ -9,9 +9,9 @@ a {
   text-decoration: none; }
 
 .wrapper {
-  max-width: 1440px;
   display: block;
   margin: 0 auto;
+  max-width: 1440px;
   padding-left: 10px;
   padding-right: 10px; }
   @media screen and (max-width: 1150px) {
@@ -221,6 +221,7 @@ header {
   align-items: center;
   height: 397px;
   border-bottom: 3px solid #6640b6;
+  box-shadow: 0px 5px 10px 2px #c0c0c0;
   background-image: url(../img/header.jpg);
   background-repeat: no-repeat;
   background-position: contain;
@@ -236,6 +237,11 @@ header {
     max-width: 90%;
     height: auto;
     margin: 0 auto; }
+
+.product {
+  padding-bottom: 25px;
+  border-bottom: 3px solid #6640b6;
+  box-shadow: 0px 5px 10px 2px #000000; }
 
 .aboutProduct {
   display: flex;
@@ -355,3 +361,75 @@ header {
   .galery-images2 img {
     max-width: 100%;
     height: auto; }
+
+.galery-images2_item:first-child {
+  margin-right: 10px; }
+
+.advantages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 25px;
+  background-color: #d4c9ec;
+  padding-bottom: 25px;
+  border-bottom: 3px solid #6640b6;
+  box-shadow: 0px 5px 10px 2px #c0c0c0; }
+  @media screen and (max-width: 780px) {
+    .advantages {
+      box-sizing: border-box; } }
+
+.flex-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1440px;
+  padding-left: 10px;
+  padding-right: 10px; }
+  @media screen and (max-width: 1150px) {
+    .flex-wrapper {
+      padding-left: 20px;
+      padding-right: 20px; } }
+
+.advantages-title {
+  display: block;
+  margin: 0 auto;
+  padding: 25px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #4b2d8b;
+  font-size: 50px; }
+  @media screen and (max-width: 780px) {
+    .advantages-title {
+      font-size: 35px; } }
+
+.advantages-elements {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  width: 100%; }
+  @media screen and (max-width: 780px) {
+    .advantages-elements {
+      flex-wrap: wrap; } }
+
+.advantages-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: calc(100% / 4); }
+  @media screen and (max-width: 780px) {
+    .advantages-image {
+      flex-wrap: wrap;
+      width: 100px; } }
+  .advantages-image img {
+    padding-top: 20px;
+    width: 50%;
+    height: auto; }
+
+.advantages-image_title {
+  text-align: center;
+  padding: 20px;
+  color: #6640b6;
+  font-size: 30px; }
+  @media screen and (max-width: 780px) {
+    .advantages-image_title {
+      font-size: 20px; } }
